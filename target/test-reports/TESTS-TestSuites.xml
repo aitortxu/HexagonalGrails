@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="0" name="AuthorControllerTests" package="hexagonalgrails" tests="8" time="1.042" timestamp="2012-08-02T20:17:57">
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="0" name="AuthorControllerTests" package="hexagonalgrails" tests="8" time="6.189" timestamp="2012-08-02T21:30:10">
       <properties />
 
-      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testIndex" time="0.361" />
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testIndex" time="3.0" />
 
-      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testList" time="0.08" />
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testList" time="1.189" />
 
-      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testCreate" time="0.075" />
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testCreate" time="0.325" />
 
-      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testSave" time="0.105" />
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testSave" time="0.661" />
 
-      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testShow" time="0.076" />
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testShow" time="0.222" />
 
-      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testEdit" time="0.078" />
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testEdit" time="0.145" />
 
-      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testUpdate" time="0.084" />
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testUpdate" time="0.302" />
 
-      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testDelete" time="0.08" />
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testDelete" time="0.152" />
 
       <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
@@ -42,10 +42,10 @@ Field error in object 'hexagonalgrails.Author' on field 'name': rejected value [
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="1" name="AuthorTests" package="hexagonalgrails" tests="1" time="0.251" timestamp="2012-08-02T20:17:58">
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="1" name="AuthorTests" package="hexagonalgrails" tests="1" time="0.401" timestamp="2012-08-02T21:30:16">
       <properties />
 
-      <testcase classname="hexagonalgrails.AuthorTests" name="testSomething" time="0.124" />
+      <testcase classname="hexagonalgrails.AuthorTests" name="testSomething" time="0.188" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -54,24 +54,31 @@ Field error in object 'hexagonalgrails.Author' on field 'name': rejected value [
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="2" name="BookControllerTests" package="hexagonalgrails" tests="8" time="1.078" timestamp="2012-08-02T20:17:58">
+  <testsuite errors="1" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="2" name="BookControllerTests" package="hexagonalgrails" tests="8" time="2.176" timestamp="2012-08-02T21:30:16">
       <properties />
 
-      <testcase classname="hexagonalgrails.BookControllerTests" name="testIndex" time="0.366" />
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testIndex" time="0.623" />
 
-      <testcase classname="hexagonalgrails.BookControllerTests" name="testList" time="0.075" />
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testList" time="0.384">
+          <error message="No signature of method: static hexagonalgrails.BookModel.list() is applicable for argument types: (org.codehaus.groovy.grails.web.servlet.mvc.GrailsParameterMap) values: [[max:10]]&#xa;Possible solutions: list(java.lang.Object), is(java.lang.Object), wait(), find(), wait(long), print(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: static hexagonalgrails.BookModel.list() is applicable for argument types: (org.codehaus.groovy.grails.web.servlet.mvc.GrailsParameterMap) values: [[max:10]]
+Possible solutions: list(java.lang.Object), is(java.lang.Object), wait(), find(), wait(long), print(java.lang.Object)
+	at hexagonalgrails.BookController.list(BookController.groovy:17)
+	at hexagonalgrails.BookControllerTests.testList(BookControllerTests.groovy:27)
+</error>
 
-      <testcase classname="hexagonalgrails.BookControllerTests" name="testCreate" time="0.072" />
+      </testcase>
 
-      <testcase classname="hexagonalgrails.BookControllerTests" name="testSave" time="0.104" />
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testCreate" time="0.144" />
 
-      <testcase classname="hexagonalgrails.BookControllerTests" name="testShow" time="0.082" />
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testSave" time="0.289" />
 
-      <testcase classname="hexagonalgrails.BookControllerTests" name="testEdit" time="0.081" />
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testShow" time="0.238" />
 
-      <testcase classname="hexagonalgrails.BookControllerTests" name="testUpdate" time="0.099" />
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testEdit" time="0.091" />
 
-      <testcase classname="hexagonalgrails.BookControllerTests" name="testDelete" time="0.1" />
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testUpdate" time="0.147" />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testDelete" time="0.136" />
 
       <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
@@ -96,10 +103,10 @@ Field error in object 'hexagonalgrails.Author' on field 'name': rejected value [
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="3" name="BookTests" package="hexagonalgrails" tests="1" time="0.099" timestamp="2012-08-02T20:17:59">
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="3" name="BookTests" package="hexagonalgrails" tests="1" time="0.089" timestamp="2012-08-02T21:30:19">
       <properties />
 
-      <testcase classname="hexagonalgrails.BookTests" name="testSomething" time="0.099" />
+      <testcase classname="hexagonalgrails.BookTests" name="testSomething" time="0.086" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>

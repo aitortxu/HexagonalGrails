@@ -6,13 +6,15 @@ class BookController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+    def bookModel = new BookModel()
+
     def index() {
         redirect(action: "list", params: params)
     }
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        [bookInstanceList: Book.list(params), bookInstanceTotal: Book.count()]
+        [bookInstanceList: BookModel.list(params), bookInstanceTotal: Book.count()]
     }
 
     def create() {
@@ -21,7 +23,6 @@ class BookController {
 
     def save() {
         def bookInstance = new Book(params)
-        println "-- " + params
         if (!bookInstance.save(flush: true)) {
             render(view: "create", model: [bookInstance: bookInstance])
             return

@@ -1,5 +1,5 @@
 Testsuite: hexagonalgrails.BookControllerTests
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1,078 sec
+Tests run: 8, Failures: 0, Errors: 1, Time elapsed: 2,176 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
 --Output from testList--
@@ -23,11 +23,19 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1,078 sec
 --Output from testDelete--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0,366 sec
-Testcase: testList took 0,075 sec
-Testcase: testCreate took 0,072 sec
-Testcase: testSave took 0,104 sec
-Testcase: testShow took 0,082 sec
-Testcase: testEdit took 0,081 sec
-Testcase: testUpdate took 0,099 sec
-Testcase: testDelete took 0,1 sec
+Testcase: testIndex took 0,623 sec
+Testcase: testList took 0,373 sec
+	Caused an ERROR
+No signature of method: static hexagonalgrails.BookModel.list() is applicable for argument types: (org.codehaus.groovy.grails.web.servlet.mvc.GrailsParameterMap) values: [[max:10]]
+Possible solutions: list(java.lang.Object), is(java.lang.Object), wait(), find(), wait(long), print(java.lang.Object)
+groovy.lang.MissingMethodException: No signature of method: static hexagonalgrails.BookModel.list() is applicable for argument types: (org.codehaus.groovy.grails.web.servlet.mvc.GrailsParameterMap) values: [[max:10]]
+Possible solutions: list(java.lang.Object), is(java.lang.Object), wait(), find(), wait(long), print(java.lang.Object)
+	at hexagonalgrails.BookController.list(BookController.groovy:17)
+	at hexagonalgrails.BookControllerTests.testList(BookControllerTests.groovy:27)
+
+Testcase: testCreate took 0,144 sec
+Testcase: testSave took 0,289 sec
+Testcase: testShow took 0,238 sec
+Testcase: testEdit took 0,091 sec
+Testcase: testUpdate took 0,148 sec
+Testcase: testDelete took 0,136 sec

@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" name="hexagonalgrails.BookControllerTests" tests="8" time="1.078" timestamp="2012-08-02T20:17:58">
+<testsuite errors="1" failures="0" hostname="MacBook-Pro-de-Aitor.local" name="hexagonalgrails.BookControllerTests" tests="8" time="2.176" timestamp="2012-08-02T21:30:16">
   <properties />
-  <testcase classname="hexagonalgrails.BookControllerTests" name="testIndex" time="0.366" />
-  <testcase classname="hexagonalgrails.BookControllerTests" name="testList" time="0.075" />
-  <testcase classname="hexagonalgrails.BookControllerTests" name="testCreate" time="0.072" />
-  <testcase classname="hexagonalgrails.BookControllerTests" name="testSave" time="0.104" />
-  <testcase classname="hexagonalgrails.BookControllerTests" name="testShow" time="0.082" />
-  <testcase classname="hexagonalgrails.BookControllerTests" name="testEdit" time="0.081" />
-  <testcase classname="hexagonalgrails.BookControllerTests" name="testUpdate" time="0.099" />
-  <testcase classname="hexagonalgrails.BookControllerTests" name="testDelete" time="0.1" />
+  <testcase classname="hexagonalgrails.BookControllerTests" name="testIndex" time="0.623" />
+  <testcase classname="hexagonalgrails.BookControllerTests" name="testList" time="0.384">
+    <error message="No signature of method: static hexagonalgrails.BookModel.list() is applicable for argument types: (org.codehaus.groovy.grails.web.servlet.mvc.GrailsParameterMap) values: [[max:10]]&#xa;Possible solutions: list(java.lang.Object), is(java.lang.Object), wait(), find(), wait(long), print(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: static hexagonalgrails.BookModel.list() is applicable for argument types: (org.codehaus.groovy.grails.web.servlet.mvc.GrailsParameterMap) values: [[max:10]]
+Possible solutions: list(java.lang.Object), is(java.lang.Object), wait(), find(), wait(long), print(java.lang.Object)
+	at hexagonalgrails.BookController.list(BookController.groovy:17)
+	at hexagonalgrails.BookControllerTests.testList(BookControllerTests.groovy:27)
+</error>
+  </testcase>
+  <testcase classname="hexagonalgrails.BookControllerTests" name="testCreate" time="0.144" />
+  <testcase classname="hexagonalgrails.BookControllerTests" name="testSave" time="0.289" />
+  <testcase classname="hexagonalgrails.BookControllerTests" name="testShow" time="0.238" />
+  <testcase classname="hexagonalgrails.BookControllerTests" name="testEdit" time="0.091" />
+  <testcase classname="hexagonalgrails.BookControllerTests" name="testUpdate" time="0.147" />
+  <testcase classname="hexagonalgrails.BookControllerTests" name="testDelete" time="0.136" />
   <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
 --Output from testCreate--

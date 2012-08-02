@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" name="hexagonalgrails.AuthorControllerTests" tests="8" time="1.042" timestamp="2012-08-02T20:17:57">
+<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" name="hexagonalgrails.AuthorControllerTests" tests="8" time="6.189" timestamp="2012-08-02T21:30:10">
   <properties />
-  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testIndex" time="0.361" />
-  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testList" time="0.08" />
-  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testCreate" time="0.075" />
-  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testSave" time="0.105" />
-  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testShow" time="0.076" />
-  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testEdit" time="0.078" />
-  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testUpdate" time="0.084" />
-  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testDelete" time="0.08" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testIndex" time="3.0" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testList" time="1.189" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testCreate" time="0.325" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testSave" time="0.661" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testShow" time="0.222" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testEdit" time="0.145" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testUpdate" time="0.302" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testDelete" time="0.152" />
   <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
 --Output from testCreate--

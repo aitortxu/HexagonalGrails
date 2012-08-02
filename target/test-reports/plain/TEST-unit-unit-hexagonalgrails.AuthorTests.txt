@@ -1,5 +1,5 @@
 Testsuite: hexagonalgrails.AuthorTests
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0,251 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0,401 sec
 ------------- Standard Output ---------------
 --Output from testSomething--
 ------------- ---------------- ---------------
@@ -7,4 +7,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0,251 sec
 --Output from testSomething--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0,124 sec
+Testcase: testSomething took 0,188 sec
