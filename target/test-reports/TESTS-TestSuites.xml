@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="0" name="AuthorControllerTests" package="hexagonalgrails" tests="8" time="1.042" timestamp="2012-08-02T20:17:57">
+      <properties />
+
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testIndex" time="0.361" />
+
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testList" time="0.08" />
+
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testCreate" time="0.075" />
+
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testSave" time="0.105" />
+
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testShow" time="0.076" />
+
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testEdit" time="0.078" />
+
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testUpdate" time="0.084" />
+
+      <testcase classname="hexagonalgrails.AuthorControllerTests" name="testDelete" time="0.08" />
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+org.grails.datastore.mapping.validation.ValidationErrors: 1 errors
+Field error in object 'hexagonalgrails.Author' on field 'name': rejected value [null]; codes [hexagonalgrails.Author.name.nullable.error.hexagonalgrails.Author.name,hexagonalgrails.Author.name.nullable.error.name,hexagonalgrails.Author.name.nullable.error.java.lang.String,hexagonalgrails.Author.name.nullable.error,author.name.nullable.error.hexagonalgrails.Author.name,author.name.nullable.error.name,author.name.nullable.error.java.lang.String,author.name.nullable.error,hexagonalgrails.Author.name.nullable.hexagonalgrails.Author.name,hexagonalgrails.Author.name.nullable.name,hexagonalgrails.Author.name.nullable.java.lang.String,hexagonalgrails.Author.name.nullable,author.name.nullable.hexagonalgrails.Author.name,author.name.nullable.name,author.name.nullable.java.lang.String,author.name.nullable,nullable.hexagonalgrails.Author.name,nullable.name,nullable.java.lang.String,nullable]; arguments [name,class hexagonalgrails.Author]; default message [Property [{0}] of class [{1}] cannot be null]
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="1" name="AuthorTests" package="hexagonalgrails" tests="1" time="0.251" timestamp="2012-08-02T20:17:58">
+      <properties />
+
+      <testcase classname="hexagonalgrails.AuthorTests" name="testSomething" time="0.124" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="2" name="BookControllerTests" package="hexagonalgrails" tests="8" time="1.078" timestamp="2012-08-02T20:17:58">
+      <properties />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testIndex" time="0.366" />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testList" time="0.075" />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testCreate" time="0.072" />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testSave" time="0.104" />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testShow" time="0.082" />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testEdit" time="0.081" />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testUpdate" time="0.099" />
+
+      <testcase classname="hexagonalgrails.BookControllerTests" name="testDelete" time="0.1" />
+
+      <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+-- [:]
+-- [title:someValidName, author:hexagonalgrails.Author : null]
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" id="3" name="BookTests" package="hexagonalgrails" tests="1" time="0.099" timestamp="2012-08-02T20:17:59">
+      <properties />
+
+      <testcase classname="hexagonalgrails.BookTests" name="testSomething" time="0.099" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

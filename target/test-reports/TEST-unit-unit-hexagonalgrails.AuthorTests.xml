@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" name="hexagonalgrails.AuthorTests" tests="1" time="0.251" timestamp="2012-08-02T20:17:58">
+  <properties />
+  <testcase classname="hexagonalgrails.AuthorTests" name="testSomething" time="0.124" />
+  <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+  <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+</testsuite>

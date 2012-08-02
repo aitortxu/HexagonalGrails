@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="MacBook-Pro-de-Aitor.local" name="hexagonalgrails.AuthorControllerTests" tests="8" time="1.042" timestamp="2012-08-02T20:17:57">
+  <properties />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testIndex" time="0.361" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testList" time="0.08" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testCreate" time="0.075" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testSave" time="0.105" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testShow" time="0.076" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testEdit" time="0.078" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testUpdate" time="0.084" />
+  <testcase classname="hexagonalgrails.AuthorControllerTests" name="testDelete" time="0.08" />
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+org.grails.datastore.mapping.validation.ValidationErrors: 1 errors
+Field error in object 'hexagonalgrails.Author' on field 'name': rejected value [null]; codes [hexagonalgrails.Author.name.nullable.error.hexagonalgrails.Author.name,hexagonalgrails.Author.name.nullable.error.name,hexagonalgrails.Author.name.nullable.error.java.lang.String,hexagonalgrails.Author.name.nullable.error,author.name.nullable.error.hexagonalgrails.Author.name,author.name.nullable.error.name,author.name.nullable.error.java.lang.String,author.name.nullable.error,hexagonalgrails.Author.name.nullable.hexagonalgrails.Author.name,hexagonalgrails.Author.name.nullable.name,hexagonalgrails.Author.name.nullable.java.lang.String,hexagonalgrails.Author.name.nullable,author.name.nullable.hexagonalgrails.Author.name,author.name.nullable.name,author.name.nullable.java.lang.String,author.name.nullable,nullable.hexagonalgrails.Author.name,nullable.name,nullable.java.lang.String,nullable]; arguments [name,class hexagonalgrails.Author]; default message [Property [{0}] of class [{1}] cannot be null]
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>

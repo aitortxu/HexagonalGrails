@@ -1,0 +1,33 @@
+Testsuite: hexagonalgrails.BookControllerTests
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1,078 sec
+------------- Standard Output ---------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+-- [:]
+-- [title:someValidName, author:hexagonalgrails.Author : null]
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+
+Testcase: testIndex took 0,366 sec
+Testcase: testList took 0,075 sec
+Testcase: testCreate took 0,072 sec
+Testcase: testSave took 0,104 sec
+Testcase: testShow took 0,082 sec
+Testcase: testEdit took 0,081 sec
+Testcase: testUpdate took 0,099 sec
+Testcase: testDelete took 0,1 sec

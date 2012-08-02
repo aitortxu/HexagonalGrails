@@ -1,0 +1,33 @@
+Testsuite: hexagonalgrails.AuthorControllerTests
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1,042 sec
+------------- Standard Output ---------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+org.grails.datastore.mapping.validation.ValidationErrors: 1 errors
+Field error in object 'hexagonalgrails.Author' on field 'name': rejected value [null]; codes [hexagonalgrails.Author.name.nullable.error.hexagonalgrails.Author.name,hexagonalgrails.Author.name.nullable.error.name,hexagonalgrails.Author.name.nullable.error.java.lang.String,hexagonalgrails.Author.name.nullable.error,author.name.nullable.error.hexagonalgrails.Author.name,author.name.nullable.error.name,author.name.nullable.error.java.lang.String,author.name.nullable.error,hexagonalgrails.Author.name.nullable.hexagonalgrails.Author.name,hexagonalgrails.Author.name.nullable.name,hexagonalgrails.Author.name.nullable.java.lang.String,hexagonalgrails.Author.name.nullable,author.name.nullable.hexagonalgrails.Author.name,author.name.nullable.name,author.name.nullable.java.lang.String,author.name.nullable,nullable.hexagonalgrails.Author.name,nullable.name,nullable.java.lang.String,nullable]; arguments [name,class hexagonalgrails.Author]; default message [Property [{0}] of class [{1}] cannot be null]
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+
+Testcase: testIndex took 0,361 sec
+Testcase: testList took 0,081 sec
+Testcase: testCreate took 0,075 sec
+Testcase: testSave took 0,106 sec
+Testcase: testShow took 0,076 sec
+Testcase: testEdit took 0,078 sec
+Testcase: testUpdate took 0,084 sec
+Testcase: testDelete took 0,08 sec
