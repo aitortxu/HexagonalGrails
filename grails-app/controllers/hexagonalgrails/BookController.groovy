@@ -14,7 +14,7 @@ class BookController {
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        [bookInstanceList: BookModel.list(params), bookInstanceTotal: Book.count()]
+        [bookInstanceList: bookModel.list(params), bookInstanceTotal: bookModel.count()]
     }
 
     def create() {
@@ -22,83 +22,66 @@ class BookController {
     }
 
     def save() {
-        def bookInstance = new Book(params)
-        if (!bookInstance.save(flush: true)) {
-            render(view: "create", model: [bookInstance: bookInstance])
-            return
-        }
-
+        bookModel.save(params, this)
+    }
+    def savingError(bookInstance){
+        render(view: "create", model: [bookInstance: bookInstance])
+    }
+    def savingOk(bookInstance){
         flash.message = message(code: 'default.created.message', args: [message(code: 'book.label', default: 'Book'), bookInstance.id])
         redirect(action: "show", id: bookInstance.id)
     }
 
-    def show(Long id) {
-        def bookInstance = Book.get(id)
-        if (!bookInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'book.label', default: 'Book'), id])
-            redirect(action: "list")
-            return
-        }
 
-        [bookInstance: bookInstance]
+    def show(Long id) {
+        [bookInstance: bookModel.show(id, this)]
+    }
+
+    def showingError(Long id){
+        flash.message = message(code: 'default.not.found.message', args: [message(code: 'book.label', default: 'Book'), id])
+        redirect(action: "list")       
     }
 
     def edit(Long id) {
-        def bookInstance = Book.get(id)
-        if (!bookInstance) {
+        [bookInstance: bookModel.edit(id, this)]
+    }
+    def editingError(Long id){
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'book.label', default: 'Book'), id])
             redirect(action: "list")
-            return
-        }
-
-        [bookInstance: bookInstance]
+            return        
     }
 
     def update(Long id, Long version) {
-        def bookInstance = Book.get(id)
-        if (!bookInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'book.label', default: 'Book'), id])
-            redirect(action: "list")
-            return
-        }
-
-        if (version != null) {
-            if (bookInstance.version > version) {
-                bookInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'book.label', default: 'Book')] as Object[],
-                          "Another user has updated this Book while you were editing")
-                render(view: "edit", model: [bookInstance: bookInstance])
-                return
-            }
-        }
-
-        bookInstance.properties = params
-
-        if (!bookInstance.save(flush: true)) {
-            render(view: "edit", model: [bookInstance: bookInstance])
-            return
-        }
-
+        bookModel.update(id,version,params,this)
+    }
+    def notFound(bookInstance){
+        flash.message = message(code: 'default.not.found.message', args: [message(code: 'book.label', default: 'Book'), bookInstance?.id])
+        redirect(action: "list")
+    }
+    def updatingOk(bookInstance){
         flash.message = message(code: 'default.updated.message', args: [message(code: 'book.label', default: 'Book'), bookInstance.id])
         redirect(action: "show", id: bookInstance.id)
     }
+    def updatingError(bookInstance){
+        render(view: "edit", model: [bookInstance: bookInstance])
+    }
+    def updatingVersionError(bookInstance){
+        bookInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
+                  [message(code: 'book.label', default: 'Book')] as Object[],
+                  "Another user has updated this Book while you were editing")
+        render(view: "edit", model: [bookInstance: bookInstance])
+        return  
+    }
 
     def delete(Long id) {
-        def bookInstance = Book.get(id)
-        if (!bookInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'book.label', default: 'Book'), id])
-            redirect(action: "list")
-            return
-        }
-
-        try {
-            bookInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'book.label', default: 'Book'), id])
-            redirect(action: "list")
-        }
-        catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'book.label', default: 'Book'), id])
+        bookModel.delete(id,this)
+    }
+    def deletingOk(bookInstance){
+        flash.message = message(code: 'default.deleted.message', args: [message(code: 'book.label', default: 'Book'), bookInstance.id])
+        redirect(action: "list")
+    }
+    def deletingError(bookInstance){
+            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'book.label', default: 'Book'), bookInstance.id])
             redirect(action: "show", id: id)
-        }
     }
 }
